@@ -3,6 +3,7 @@ package domain;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -28,6 +29,8 @@ public class Employee { //
 	@GeneratedValue
 	private long id;
 
+	
+	
 	@Column(table = "Adresy", name = "miejscowosc")
 	private String locality;
 	@Column(table = "Adresy", name = "kodPocztowy")
@@ -35,8 +38,30 @@ public class Employee { //
 	@Column(table = "Adresy", name = "ulica")
 	private String street;
 
+	
+	@Embedded
+	private AdditionalData additionalDatas ;
+	
+	
+	@Column(table = "Adresy", name = "nrDomu")
+	private String streetNumber;
+	@Temporal(TemporalType.DATE)
+	@Column(table = "Adresy", name = "urodzony")
+	private Date born;
+	@Column(table = "Adresy", name = "kiedyHajtniety")
+	private java.sql.Date married;
+
+
 	public Date getBorn() {
 		return born;
+	}
+
+	public AdditionalData getAdditionalDatas() {
+		return additionalDatas;
+	}
+
+	public void setAdditionalDatas(AdditionalData additionalDatas) {
+		this.additionalDatas = additionalDatas;
 	}
 
 	public void setBorn(Date born) {
@@ -51,13 +76,7 @@ public class Employee { //
 		this.married = married;
 	}
 
-	@Column(table = "Adresy", name = "nrDomu")
-	private String streetNumber;
-	@Temporal(TemporalType.DATE)
-	@Column(table = "Adresy", name = "urodzony")
-	private Date born;
-	@Column(table = "Adresy", name = "kiedyHajtniety")
-	private java.sql.Date married;
+	
 
 	public String getLocality() {
 		return locality;

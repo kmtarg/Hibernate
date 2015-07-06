@@ -48,6 +48,11 @@ public class Main {
 		//pracownik2.setImie("222");
 		//pracownik2.setNazwisko("2222");
 		//pracownik2.setWyplata(33.33);
+		
+		
+
+		
+		
 
 		emm.getTransaction().begin();
 		emm.persist(pracownik);

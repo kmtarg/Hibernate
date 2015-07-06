@@ -16,7 +16,7 @@ public class GetAndEditDataFromTable {
 		
 		emm.getTransaction().begin();
 		
-		Employee prac = emm.find(Employee.class, 1L);
+		Employee prac = emm.find(Employee.class, 1L);  // wyszukiwanie po klasie oraz ID ( uwaga typ long)
 		
 		System.out.println("pracownik imie " + prac.getImie());
 		

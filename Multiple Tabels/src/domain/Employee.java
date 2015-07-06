@@ -50,7 +50,14 @@ public class Employee { //
 	private Date born;
 	@Column(table = "Adresy", name = "kiedyHajtniety")
 	private java.sql.Date married;
+	
+	private long podatek;
+	
 
+
+	public long getPodatek() {
+		return podatek;
+	}
 
 	public Date getBorn() {
 		return born;

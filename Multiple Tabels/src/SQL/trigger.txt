@@ -1,0 +1,3 @@
+Create trigger dodaj_podatek
+before insert on Pracownicy for each row
+set new.podatek = new.Wyplata * 0.20;

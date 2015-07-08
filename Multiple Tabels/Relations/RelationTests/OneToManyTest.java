@@ -8,7 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import OneToMany.Car;
-import OneToMany.Owner;
+import OneToMany.Owner2;
 
 public class OneToManyTest {
 
@@ -25,7 +25,7 @@ public class OneToManyTest {
 		auta.add(auto1);
 		auta.add(auto2);
 		
-		Owner wlsaciciel = new Owner();
+		Owner2 wlsaciciel = new Owner2();
 		
 		wlsaciciel.setFirstName("Kamil");
 		wlsaciciel.setCars(auta);

@@ -9,12 +9,11 @@ import javax.persistence.OneToMany;
 @Entity
 public class Car {
 	@Id
-	@GeneratedValue(strategy =GenerationType.AUTO)
+	@GeneratedValue()
 	private long id;
 	private String mark;
 	private String colour;
-@OneToMany
-	private Owner owner;
+
 	public long getId() {
 		return id;
 	}
@@ -33,12 +32,7 @@ public class Car {
 	public void setColour(String colour) {
 		this.colour = colour;
 	}
-	public Owner getOwner() {
-		return owner;
-	}
-	public void setOwner(Owner owner) {
-		this.owner = owner;
-	}
+
 	
 	
 	

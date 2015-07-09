@@ -4,17 +4,30 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.TableGenerator;
 
 @Entity
 public class Pracownicy1 {
 	@Id
-	@GeneratedValue
+	@TableGenerator(name = "GENERATOR", 
+	table = "Tabela_z_identyfikatorami", 
+	pkColumnName = "NazKol", 
+	pkColumnValue = "ValKol", 
+	valueColumnName = "valKOlName",
+	initialValue= 100,
+	allocationSize=500
+	
+			
+			
+			)
+	@GeneratedValue(strategy = GenerationType.TABLE,generator="GENERATOR")
 	private long id;
 	private String imie;
 	private String nazwisko;
-	@ManyToMany(mappedBy ="pracownicy12")
+	@ManyToMany(mappedBy = "pracownicy12")
 	private List<Projekty> projekt12;
 
 	public double getId() {

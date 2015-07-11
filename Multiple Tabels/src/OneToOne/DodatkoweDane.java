@@ -3,7 +3,7 @@ package OneToOne;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.PersistenceContext;
 @Entity
 public class DodatkoweDane {
 	

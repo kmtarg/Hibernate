@@ -1,6 +1,2 @@
-/RelationTests/
-/OneToOne/
 /META-INF/
-/OneToMany/
-/ManyToOne/
-/ManyToMany/
+/inheritanceStandard/

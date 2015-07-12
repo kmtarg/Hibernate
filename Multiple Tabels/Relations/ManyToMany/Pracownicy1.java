@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,7 +30,7 @@ public class Pracownicy1 {
 	private long id;
 	private String imie;
 	private String nazwisko;
-	@ManyToMany(mappedBy = "pracownicy12",cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "pracownicy12",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private List<Projekty> projekt12;
 
 	public double getId() {

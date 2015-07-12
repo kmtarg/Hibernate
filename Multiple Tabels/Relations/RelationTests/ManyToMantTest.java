@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import ManyToMany.Pracownicy1;
 import ManyToMany.Projekty;
@@ -56,6 +58,8 @@ public class ManyToMantTest {
 //		manager.persist(p5);
 
 		manager.getTransaction().commit();
+		
+
 
 		manager.close();
 		factory.close();

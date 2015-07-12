@@ -1,3 +1,8 @@
 /META-INF/
 /inheritanceStandard/
 /CriteraAPI/
+/OneToOne/
+/ManyToOne/
+/ManyToMany/
+/OneToMany/
+/RelationTests/

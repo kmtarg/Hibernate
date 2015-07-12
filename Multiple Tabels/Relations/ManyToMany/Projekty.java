@@ -2,6 +2,7 @@ package ManyToMany;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,7 +18,7 @@ public class Projekty {
 	@GeneratedValue
 	private long id;
 	private String nazwa;
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 @JoinTable(name="proacwnicy_w_projektach",
 joinColumns ={@JoinColumn(name = "aaa")},inverseJoinColumns ={@JoinColumn(name = "bbb")})
 	

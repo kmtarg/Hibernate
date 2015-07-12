@@ -2,6 +2,7 @@ package ManyToOne;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,7 +17,7 @@ public class Phone {
 	private long id;
 	private String typ;
 	private String numer;
-	@ManyToOne
+	@ManyToOne(cascade= CascadeType.ALL)
 	private Owner3 owner;
 	
 

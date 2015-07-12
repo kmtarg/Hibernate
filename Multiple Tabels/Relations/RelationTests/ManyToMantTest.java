@@ -48,12 +48,12 @@ public class ManyToMantTest {
 		manager.persist(projekt1);
 		manager.persist(projekt2);
 
-		manager.persist(p1);
-		manager.persist(p2);
-		manager.persist(p3);
-		manager.persist(p4);
-		manager.persist(p6);
-		manager.persist(p5);
+//		manager.persist(p1);
+//		manager.persist(p2);
+//		manager.persist(p3);
+//		manager.persist(p4);
+//		manager.persist(p6);
+//		manager.persist(p5);
 
 		manager.getTransaction().commit();
 

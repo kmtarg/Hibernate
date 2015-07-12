@@ -1,5 +1,6 @@
 package OneToOne;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -7,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.PersistenceContext;
+
+import org.hibernate.annotations.Cascade;
 
 @Entity
 public class Pracownik {
@@ -17,7 +20,7 @@ public class Pracownik {
 	private String imie;
 	private String nazwisko;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "adressID")
 	private DodatkoweDane dodatek;
 	

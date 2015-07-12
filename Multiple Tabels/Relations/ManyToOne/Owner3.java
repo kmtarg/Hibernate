@@ -2,6 +2,7 @@ package ManyToOne;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,7 +17,7 @@ public class Owner3 {
 	private long id;
 	private String imie;
 	private String nazwisko;
-	@OneToMany(mappedBy="owner")
+	@OneToMany(mappedBy="owner",cascade= CascadeType.ALL)
 	private List<Phone> phones;
 	public long getId() {
 		return id;

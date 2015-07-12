@@ -2,6 +2,7 @@ package OneToMany;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Owner2 {
 	private long id;
 	private String FirstName;
 	private String LastName;
-	@OneToMany
+	@OneToMany(cascade= CascadeType.ALL)
 	@JoinColumn(name ="owner_id")
 	private List<Car> cars;
 

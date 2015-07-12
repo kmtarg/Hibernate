@@ -34,8 +34,8 @@ public class OneToManyTest {
 		
 		manager.getTransaction().begin();
 		manager.persist(wlsaciciel);
-		manager.persist(auto1);
-		manager.persist(auto2);
+		//manager.persist(auto1);
+		//manager.persist(auto2);
 		manager.getTransaction().commit();
 		manager.refresh(wlsaciciel);
 
